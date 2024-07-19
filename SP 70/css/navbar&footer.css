@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+/* Main content area */
+main {
+  flex: 1;
+  overflow: auto;
+  margin: 15px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 8%;
+}
+
+/* Navbar */
+.my-navbar {
+  background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent dark background */
+  backdrop-filter: blur(12px); /* Blur effect */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  border-radius: 30px; /* Rounded corners */
+  padding: 10px 0; /* Vertical padding */
+  max-width: 95%; /* Maximum width */
+  margin: 20px auto 0; /* Centered horizontally with top margin */
+  color: #fff; /* White text */
+}
+
+.my-navbar .navbar-collapse {
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent light background */
+  backdrop-filter: blur(7px); /* Blur effect */
+  box-shadow: 0 10px 15px rgba(255, 255, 255, 0.7); /* Light shadow for glass effect */
+  border-radius: 15px; /* Rounded corners */
+  padding: 5px 17px; /* Padding around navbar items */
+  margin: 0 auto; /* Centered horizontally */
+}
+
+.my-navbar .navbar-collapse ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.my-navbar .navbar-collapse li {
+  font: bold 16px oblique; /* Combined font properties */
+  padding: 0 10px; /* Horizontal padding */
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth color transition */
+  text-align: end; /* Align text to the right */
+  font-size: 20px;
+}
+
+.my-navbar .navbar-collapse li:hover {
+  color: #ff6347 !important; /* Hover color */ 
+  text-decoration: underline !important; /* Underline on hover */
+}
+
+.my-navbar .navbar-collapse li.active {
+  color: #ff6347 !important; /* Active color */
+  text-decoration: underline !important; /* Underline on active */
+}
+
+@media (max-width: 992px) {
+  .my-navbar .navbar-collapse {
+    flex-direction: column;
+  }
+
+  .my-navbar .navbar-collapse ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .my-navbar .navbar-collapse li {
+    width: auto;
+  }
+}
+
+@media (max-width: 460px) {
+  .my-navbar .navbar-collapse {
+    max-width: 100%; /* Adjusted max-width for smaller screens */
+  }
+
+  .my-navbar .navbar-collapse ul {
+    width: 100%;
+  }
+
+  .my-navbar .navbar-collapse li {
+    width: 100%;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: rgba(255, 255, 255, 0.215); /* Semi-transparent light shaded background */
+  color: #333; /* Dark text */
+  padding: 7px;
+  text-align: center;
+  font-size: 11px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  margin-top: 20px;
+  margin-bottom: 0;
+  max-height: 20px; /* Max height for the footer */
+  height: 20px; /* Ensure fixed height */
+}
+
+footer > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ff6347;
+  text-decoration: underline;
+}
+
+
+/* Body background */
+body {
+  background-image: url(../graphics/red\ waves\ black\ backround.jpg); /* Background image */
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff; /* White text */
+}
+
+/* Scroll-to-top button */
+#myBtn {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  font-size: 15px;
+  background-color: rgb(25, 135, 84);
+  padding: 7px;
+  bottom: 60px;
+  right: 20px;
+}
+
+#myBtn:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+@media only screen and (max-width: 768px) {
+  #myBtn {
+    bottom: 100px; /* Adjusted position for smaller screens */
+  }
+}
